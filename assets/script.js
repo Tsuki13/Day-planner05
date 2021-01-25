@@ -10,7 +10,7 @@ $(document).ready(function(){
     $(".saveBtn").on("click", function(){
     //set key and value variables
     //using save-btn only selects hour 8 - no matter which btn is clicked
-    //this selects time-block that is clicked
+    //$(this) selects current element that receives action
     var userInput = $(this).siblings(".description").val();
     var hour = $(this).parent().attr("id"); 
       //saving data to local storage ("key", "value")
@@ -31,6 +31,22 @@ $("#hour15 .description").val(localStorage.getItem('hour15'));
 $("#hour16 .description").val(localStorage.getItem('hour16'));
 $("#hour17 .description").val(localStorage.getItem('hour17'));
 console.log(localStorage);
+
+//color code for past, present, and future.
+function tenses (){
+    //variable for current time
+    var currentHour = moment().hour();
+    console.log(currentHour)
+//function to add css colors to times
+    $(".row").each(function(){
+         if (currentHour == currentHour) {
+             $(".row").addClass("present");
+         } 
+        
+    })
+    
+}
+tenses();
 
 
 
