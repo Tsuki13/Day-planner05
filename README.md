@@ -25,6 +25,6 @@ THEN the saved events persist
 <img src="assets/WDS.png">
 
 
-## Link to deploy application
+## Link to deployed application
 
 https://tsuki13.github.io/Day-planner05/
